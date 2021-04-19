@@ -107,11 +107,9 @@ public class EventHandler extends AbstractWebDriverEventListener {
 
     @Override
     public void afterChangeValueOf(WebElement webElement, WebDriver webDriver, CharSequence[] charSequences) {
-        //Selenide clears the input before changing it value, thus this check will skipp empty strings in logs
         String value = webElement.getAttribute("value");
-        if (!value.equals(""))
-            if (value.length() > 1000)
-                value = value.substring(0, 999) + "[...]";
+        if (value.length() > 1000)
+            value = value.substring(0, 999) + "[...]";
         logWithTime("Changed value of " + webElement.getTagName() + " : " + value);
         printUrlIfChanged(webDriver);
     }
