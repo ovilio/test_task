@@ -156,7 +156,7 @@ public abstract class BasePage<T extends BasePage> {
         }
 
         /**
-         * The {@code Soring} enum represents types of product sorting for the sorting dropdown.
+         * The {@code Sorting} enum represents types of product sorting for the sorting dropdown.
          */
         public enum Sorting {
             CHEAP("От дешевых к дорогим", "1: cheap"),
