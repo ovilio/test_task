@@ -17,8 +17,11 @@ public class BookTest extends BaseTest {
     private final String targetBookPubHouse = "Диалектика";
     SoftAssert sa = new SoftAssert();
 
+    /**
+     * Implementation of the test scenario from ./README.MD
+     */
     @Test
-    public void bookTest() throws InterruptedException {
+    public void bookTest() {
         driver.get(Urls.baseUrl); //1. Зайти на rozetka.com.ua
         HomePage homePage = new HomePage(driver)
                 .waitPageLoaded();
